@@ -11,8 +11,8 @@
             }
         }
     },
-    "train_data_path": "/path/to/your/training/data/here.tsv",
-    "validation_data_path": "/path/to/your/validation/data/here.tsv",
+    "train_data_path": "data/train.text.trimmed.tsv",
+    "validation_data_path": "data/test.text.trimmed.tsv",
     "model": {
         // This name needs to match the name that you used to register your model, with
         // the call to `@Model.register()`.

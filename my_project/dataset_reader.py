@@ -31,5 +31,5 @@ class ClassificationTsvReader(DatasetReader):
     def _read(self, file_path: str) -> Iterable[Instance]:
         with open(file_path, 'r') as lines:
             for line in lines:
-                text, sentiment = line.strip().split('\t')
-                yield self.text_to_instance(text, sentiment)
+                label, text, title = line.strip().split('\t')
+                yield self.text_to_instance(text, label)

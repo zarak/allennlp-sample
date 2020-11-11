@@ -6,8 +6,8 @@
         "type": "classification-tsv",
         // These other parameters exactly match the constructor parameters of your dataset reader class.
         "token_indexers": {
-            "tokens": {
-                "type": "single_id"
+            "elmo": {
+                "type": "elmo_characters"
             }
         }
     },
@@ -20,28 +20,35 @@
         // These other parameters exactly match the constructor parameters of your model class.
         "embedder": {
             "token_embedders": {
-                "tokens": {
-                    "type": "embedding",
-                    "embedding_dim": 10
+                "elmo": {
+                    "type": "elmo_token_embedder",
+                    "options_file": "https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_options.json",
+                    "weight_file": "https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5",
+                    "do_layer_norm": false,
+                    "dropout": 0.0
                 }
             }
         },
         "encoder": {
-            "type": "bag_of_embeddings",
-            "embedding_dim": 10
+            "type": "lstm",
+            "input_size": 256,
+            "hidden_size": 50,
+            "num_layers": 1,
+            "bidirectional": true
         }
     },
     "data_loader": {
         // See http://docs.allennlp.org/master/api/data/dataloader/ for more info on acceptable
         // parameters here.
-        "batch_size": 8,
+        "batch_size": 2,
         "shuffle": true
     },
     "trainer": {
         // See http://docs.allennlp.org/master/api/training/trainer/#gradientdescenttrainer-objects
         // for more info on acceptable parameters here.
         "optimizer": "adam",
-        "num_epochs": 5
+        "num_epochs": 5,
+        "patience": 20
     }
     // There are a few other optional parameters that can go at the top level, e.g., to configure
     // vocabulary behavior, to use a separate dataset reader for validation data, or other things.

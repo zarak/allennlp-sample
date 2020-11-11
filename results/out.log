@@ -1,298 +1,510 @@
-2020-11-11 11:42:49,891 - INFO - allennlp.common.params - random_seed = 13370
-2020-11-11 11:42:49,891 - INFO - allennlp.common.params - numpy_seed = 1337
-2020-11-11 11:42:49,891 - INFO - allennlp.common.params - pytorch_seed = 133
-2020-11-11 11:42:49,892 - INFO - allennlp.common.checks - Pytorch version: 1.7.0
-2020-11-11 11:42:49,892 - INFO - allennlp.common.params - type = default
-2020-11-11 11:42:49,892 - INFO - allennlp.common.params - dataset_reader.type = classification-tsv
-2020-11-11 11:42:49,892 - INFO - allennlp.common.params - dataset_reader.lazy = False
-2020-11-11 11:42:49,892 - INFO - allennlp.common.params - dataset_reader.cache_directory = None
-2020-11-11 11:42:49,892 - INFO - allennlp.common.params - dataset_reader.max_instances = None
-2020-11-11 11:42:49,892 - INFO - allennlp.common.params - dataset_reader.manual_distributed_sharding = False
-2020-11-11 11:42:49,892 - INFO - allennlp.common.params - dataset_reader.manual_multi_process_sharding = False
-2020-11-11 11:42:49,892 - INFO - allennlp.common.params - dataset_reader.tokenizer = None
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.type = single_id
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.namespace = tokens
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.lowercase_tokens = False
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.start_tokens = None
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.end_tokens = None
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.feature_name = text
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.default_value = THIS IS A REALLY UNLIKELY VALUE THAT HAS TO BE A STRING
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.token_min_padding_length = 0
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - dataset_reader.max_tokens = None
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - train_data_path = data/train.text.trimmed.tsv
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - vocabulary = <allennlp.common.lazy.Lazy object at 0x7f7af1574c10>
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - datasets_for_vocab_creation = None
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - validation_dataset_reader = None
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - validation_data_path = data/test.text.trimmed.tsv
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - validation_data_loader = None
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - test_data_path = None
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - evaluate_on_test = False
-2020-11-11 11:42:49,893 - INFO - allennlp.common.params - batch_weight_key = 
-2020-11-11 11:42:49,893 - INFO - allennlp.training.util - Reading training data from data/train.text.trimmed.tsv
-2020-11-11 11:42:49,894 - INFO - tqdm - reading instances: 0it [00:00, ?it/s]
-2020-11-11 11:42:49,894 - CRITICAL - root - Uncaught exception
-Traceback (most recent call last):
-  File "/home/zarak/anaconda3/envs/media-bias3.8/bin/allennlp", line 8, in <module>
-    sys.exit(run())
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/__main__.py", line 34, in run
-    main(prog="allennlp")
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/commands/__init__.py", line 118, in main
-    args.func(args)
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/commands/train.py", line 110, in train_model_from_args
-    train_model_from_file(
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/commands/train.py", line 170, in train_model_from_file
-    return train_model(
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/commands/train.py", line 236, in train_model
-    model = _train_worker(
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/commands/train.py", line 453, in _train_worker
-    train_loop = TrainModel.from_params(
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/common/from_params.py", line 595, in from_params
-    return retyped_subclass.from_params(
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/common/from_params.py", line 629, in from_params
-    return constructor_to_call(**kwargs)  # type: ignore
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/commands/train.py", line 645, in from_partial_objects
-    datasets = training_util.read_all_datasets(
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/training/util.py", line 107, in read_all_datasets
-    train_data = dataset_reader.read(train_data_path)
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/allennlp/data/dataset_readers/dataset_reader.py", line 234, in read
-    instances = list(instances)
-  File "/home/zarak/anaconda3/envs/media-bias3.8/lib/python3.8/site-packages/tqdm/std.py", line 1171, in __iter__
-    for obj in iterable:
-  File "/home/zarak/Projects/allennlp-sample/my_project/dataset_reader.py", line 34, in _read
-    text, sentiment = line.strip().split('\t')
-ValueError: too many values to unpack (expected 2)
-2020-11-11 11:44:06,344 - INFO - allennlp.common.params - random_seed = 13370
-2020-11-11 11:44:06,344 - INFO - allennlp.common.params - numpy_seed = 1337
-2020-11-11 11:44:06,344 - INFO - allennlp.common.params - pytorch_seed = 133
-2020-11-11 11:44:06,345 - INFO - allennlp.common.checks - Pytorch version: 1.7.0
-2020-11-11 11:44:06,345 - INFO - allennlp.common.params - type = default
-2020-11-11 11:44:06,345 - INFO - allennlp.common.params - dataset_reader.type = classification-tsv
-2020-11-11 11:44:06,345 - INFO - allennlp.common.params - dataset_reader.lazy = False
-2020-11-11 11:44:06,345 - INFO - allennlp.common.params - dataset_reader.cache_directory = None
-2020-11-11 11:44:06,345 - INFO - allennlp.common.params - dataset_reader.max_instances = None
-2020-11-11 11:44:06,345 - INFO - allennlp.common.params - dataset_reader.manual_distributed_sharding = False
-2020-11-11 11:44:06,345 - INFO - allennlp.common.params - dataset_reader.manual_multi_process_sharding = False
-2020-11-11 11:44:06,345 - INFO - allennlp.common.params - dataset_reader.tokenizer = None
-2020-11-11 11:44:06,345 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.type = single_id
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.namespace = tokens
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.lowercase_tokens = False
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.start_tokens = None
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.end_tokens = None
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.feature_name = text
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.default_value = THIS IS A REALLY UNLIKELY VALUE THAT HAS TO BE A STRING
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.token_min_padding_length = 0
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - dataset_reader.max_tokens = None
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - train_data_path = data/train.text.trimmed.tsv
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - vocabulary = <allennlp.common.lazy.Lazy object at 0x7f621c874910>
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - datasets_for_vocab_creation = None
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - validation_dataset_reader = None
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - validation_data_path = data/test.text.trimmed.tsv
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - validation_data_loader = None
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - test_data_path = None
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - evaluate_on_test = False
-2020-11-11 11:44:06,346 - INFO - allennlp.common.params - batch_weight_key = 
-2020-11-11 11:44:06,346 - INFO - allennlp.training.util - Reading training data from data/train.text.trimmed.tsv
-2020-11-11 11:44:06,347 - INFO - tqdm - reading instances: 0it [00:00, ?it/s]
-2020-11-11 11:44:06,934 - INFO - allennlp.training.util - Reading validation data from data/test.text.trimmed.tsv
-2020-11-11 11:44:06,934 - INFO - tqdm - reading instances: 0it [00:00, ?it/s]
-2020-11-11 11:44:06,984 - INFO - allennlp.common.params - type = from_instances
-2020-11-11 11:44:06,984 - INFO - allennlp.common.params - min_count = None
-2020-11-11 11:44:06,984 - INFO - allennlp.common.params - max_vocab_size = None
-2020-11-11 11:44:06,984 - INFO - allennlp.common.params - non_padded_namespaces = ('*tags', '*labels')
-2020-11-11 11:44:06,985 - INFO - allennlp.common.params - pretrained_files = None
-2020-11-11 11:44:06,985 - INFO - allennlp.common.params - only_include_pretrained_words = False
-2020-11-11 11:44:06,985 - INFO - allennlp.common.params - tokens_to_add = None
-2020-11-11 11:44:06,985 - INFO - allennlp.common.params - min_pretrained_embeddings = None
-2020-11-11 11:44:06,985 - INFO - allennlp.common.params - padding_token = @@PADDING@@
-2020-11-11 11:44:06,985 - INFO - allennlp.common.params - oov_token = @@UNKNOWN@@
-2020-11-11 11:44:06,985 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
-2020-11-11 11:44:06,985 - INFO - tqdm - building vocab: 0it [00:00, ?it/s]
-2020-11-11 11:44:07,163 - INFO - allennlp.common.params - model.type = simple_classifier
-2020-11-11 11:44:07,163 - INFO - allennlp.common.params - model.embedder.type = basic
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.type = embedding
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.embedding_dim = 10
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.num_embeddings = None
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.projection_dim = None
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.weight = None
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.padding_index = None
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.trainable = True
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.max_norm = None
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.norm_type = 2.0
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.scale_grad_by_freq = False
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.sparse = False
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.vocab_namespace = tokens
-2020-11-11 11:44:07,164 - INFO - allennlp.common.params - model.embedder.token_embedders.tokens.pretrained_file = None
-2020-11-11 11:44:07,165 - INFO - allennlp.common.params - model.encoder.type = bag_of_embeddings
-2020-11-11 11:44:07,166 - INFO - allennlp.common.params - model.encoder.embedding_dim = 10
-2020-11-11 11:44:07,166 - INFO - allennlp.common.params - model.encoder.averaged = False
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.type = pytorch_dataloader
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.batch_size = 8
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.shuffle = True
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.sampler = None
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.batch_sampler = None
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.num_workers = 0
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.pin_memory = False
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.drop_last = False
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.timeout = 0
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
-2020-11-11 11:44:07,197 - INFO - allennlp.common.params - data_loader.type = pytorch_dataloader
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.batch_size = 8
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.shuffle = True
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.sampler = None
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.batch_sampler = None
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.num_workers = 0
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.pin_memory = False
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.drop_last = False
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.timeout = 0
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.type = gradient_descent
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.patience = None
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.validation_metric = -loss
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.num_epochs = 5
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.cuda_device = None
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.grad_norm = None
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.grad_clipping = None
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.distributed = False
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.world_size = 1
-2020-11-11 11:44:07,198 - INFO - allennlp.common.params - trainer.num_gradient_accumulation_steps = 1
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.use_amp = False
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.no_grad = None
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.optimizer = adam
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.learning_rate_scheduler = None
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.momentum_scheduler = None
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.tensorboard_writer = <allennlp.common.lazy.Lazy object at 0x7f621c853b50>
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.moving_average = None
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.checkpointer = <allennlp.common.lazy.Lazy object at 0x7f621c853c10>
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.batch_callbacks = None
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.epoch_callbacks = None
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.end_callbacks = None
-2020-11-11 11:44:07,199 - INFO - allennlp.common.params - trainer.trainer_callbacks = None
-2020-11-11 11:44:09,359 - INFO - allennlp.common.params - type = adam
-2020-11-11 11:44:09,359 - INFO - allennlp.common.params - parameter_groups = None
-2020-11-11 11:44:09,359 - INFO - allennlp.common.params - lr = 0.001
-2020-11-11 11:44:09,359 - INFO - allennlp.common.params - betas = (0.9, 0.999)
-2020-11-11 11:44:09,359 - INFO - allennlp.common.params - eps = 1e-08
-2020-11-11 11:44:09,359 - INFO - allennlp.common.params - weight_decay = 0.0
-2020-11-11 11:44:09,359 - INFO - allennlp.common.params - amsgrad = False
-2020-11-11 11:44:09,360 - INFO - allennlp.training.optimizers - Number of trainable parameters: 267542
-2020-11-11 11:44:09,360 - INFO - allennlp.common.util - The following parameters are Frozen (without gradient):
-2020-11-11 11:44:09,360 - INFO - allennlp.common.util - The following parameters are Tunable (with gradient):
-2020-11-11 11:44:09,360 - INFO - allennlp.common.util - embedder.token_embedder_tokens.weight
-2020-11-11 11:44:09,360 - INFO - allennlp.common.util - classifier.weight
-2020-11-11 11:44:09,360 - INFO - allennlp.common.util - classifier.bias
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - type = default
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - keep_serialized_model_every_num_seconds = None
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - num_serialized_models_to_keep = 2
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - model_save_interval = None
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - summary_interval = 100
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - histogram_interval = None
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - batch_size_interval = None
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - should_log_parameter_statistics = True
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - should_log_learning_rate = False
-2020-11-11 11:44:09,360 - INFO - allennlp.common.params - get_batch_num_total = None
-2020-11-11 11:44:09,362 - WARNING - allennlp.training.trainer - You provided a validation dataset but patience was set to None, meaning that early stopping is disabled
-2020-11-11 11:44:09,362 - INFO - allennlp.training.trainer - Beginning training.
-2020-11-11 11:44:09,362 - INFO - allennlp.training.trainer - Epoch 0/4
-2020-11-11 11:44:09,362 - INFO - allennlp.training.trainer - Worker 0 memory usage: 2.9G
-2020-11-11 11:44:09,362 - INFO - allennlp.training.trainer - GPU 0 memory usage: 1.0M
-2020-11-11 11:44:09,362 - INFO - allennlp.training.trainer - Training
-2020-11-11 11:44:09,362 - INFO - tqdm - 0%|          | 0/69 [00:00<?, ?it/s]
-2020-11-11 11:44:09,649 - INFO - tqdm - accuracy: 0.6972, batch_loss: 0.5166, loss: 0.6241 ||: 100%|##########| 69/69 [00:00<00:00, 240.39it/s]
-2020-11-11 11:44:09,654 - INFO - allennlp.training.trainer - Validating
-2020-11-11 11:44:09,654 - INFO - tqdm - 0%|          | 0/13 [00:00<?, ?it/s]
-2020-11-11 11:44:09,698 - INFO - tqdm - accuracy: 0.6400, batch_loss: 0.5581, loss: 0.7173 ||: 100%|##########| 13/13 [00:00<00:00, 295.19it/s]
-2020-11-11 11:44:09,698 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
-2020-11-11 11:44:09,699 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.697  |     0.640
-2020-11-11 11:44:09,699 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     1.021  |       N/A
-2020-11-11 11:44:09,699 - INFO - allennlp.training.tensorboard_writer - loss               |     0.624  |     0.717
-2020-11-11 11:44:09,700 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  2948.598  |       N/A
-2020-11-11 11:44:09,703 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'results//best.th'.
-2020-11-11 11:44:09,704 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.341782
-2020-11-11 11:44:09,704 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:01
-2020-11-11 11:44:09,704 - INFO - allennlp.training.trainer - Epoch 1/4
-2020-11-11 11:44:09,704 - INFO - allennlp.training.trainer - Worker 0 memory usage: 2.9G
-2020-11-11 11:44:09,704 - INFO - allennlp.training.trainer - GPU 0 memory usage: 8.6M
-2020-11-11 11:44:09,704 - INFO - allennlp.training.trainer - Training
-2020-11-11 11:44:09,704 - INFO - tqdm - 0%|          | 0/69 [00:00<?, ?it/s]
-2020-11-11 11:44:09,848 - INFO - tqdm - accuracy: 0.9725, batch_loss: 0.1480, loss: 0.1827 ||: 100%|##########| 69/69 [00:00<00:00, 478.82it/s]
-2020-11-11 11:44:09,850 - INFO - allennlp.training.trainer - Validating
-2020-11-11 11:44:09,850 - INFO - tqdm - 0%|          | 0/13 [00:00<?, ?it/s]
-2020-11-11 11:44:09,864 - INFO - tqdm - accuracy: 0.7200, batch_loss: 0.2150, loss: 0.5841 ||: 100%|##########| 13/13 [00:00<00:00, 963.53it/s]
-2020-11-11 11:44:09,864 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
-2020-11-11 11:44:09,864 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.972  |     0.720
-2020-11-11 11:44:09,864 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     8.629  |       N/A
-2020-11-11 11:44:09,864 - INFO - allennlp.training.tensorboard_writer - loss               |     0.183  |     0.584
-2020-11-11 11:44:09,864 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  2962.875  |       N/A
-2020-11-11 11:44:09,868 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'results//best.th'.
-2020-11-11 11:44:09,868 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.164529
-2020-11-11 11:44:09,868 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:00
-2020-11-11 11:44:09,868 - INFO - allennlp.training.trainer - Epoch 2/4
-2020-11-11 11:44:09,868 - INFO - allennlp.training.trainer - Worker 0 memory usage: 2.9G
-2020-11-11 11:44:09,869 - INFO - allennlp.training.trainer - GPU 0 memory usage: 8.6M
-2020-11-11 11:44:09,869 - INFO - allennlp.training.trainer - Training
-2020-11-11 11:44:09,869 - INFO - tqdm - 0%|          | 0/69 [00:00<?, ?it/s]
-2020-11-11 11:44:10,017 - INFO - tqdm - accuracy: 0.9963, batch_loss: 0.0035, loss: 0.0764 ||: 100%|##########| 69/69 [00:00<00:00, 464.88it/s]
-2020-11-11 11:44:10,019 - INFO - allennlp.training.trainer - Validating
-2020-11-11 11:44:10,019 - INFO - tqdm - 0%|          | 0/13 [00:00<?, ?it/s]
-2020-11-11 11:44:10,032 - INFO - tqdm - accuracy: 0.6900, batch_loss: 1.2653, loss: 0.7496 ||: 100%|##########| 13/13 [00:00<00:00, 1050.11it/s]
-2020-11-11 11:44:10,032 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
-2020-11-11 11:44:10,032 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.996  |     0.690
-2020-11-11 11:44:10,032 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     8.629  |       N/A
-2020-11-11 11:44:10,033 - INFO - allennlp.training.tensorboard_writer - loss               |     0.076  |     0.750
-2020-11-11 11:44:10,033 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  2963.355  |       N/A
-2020-11-11 11:44:10,038 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.169581
-2020-11-11 11:44:10,038 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:00
-2020-11-11 11:44:10,038 - INFO - allennlp.training.trainer - Epoch 3/4
-2020-11-11 11:44:10,038 - INFO - allennlp.training.trainer - Worker 0 memory usage: 2.9G
-2020-11-11 11:44:10,039 - INFO - allennlp.training.trainer - GPU 0 memory usage: 8.6M
-2020-11-11 11:44:10,039 - INFO - allennlp.training.trainer - Training
-2020-11-11 11:44:10,039 - INFO - tqdm - 0%|          | 0/69 [00:00<?, ?it/s]
-2020-11-11 11:44:10,176 - INFO - tqdm - accuracy: 0.9963, batch_loss: 0.1307, loss: 0.0402 ||: 100%|##########| 69/69 [00:00<00:00, 503.62it/s]
-2020-11-11 11:44:10,178 - INFO - allennlp.training.trainer - Validating
-2020-11-11 11:44:10,178 - INFO - tqdm - 0%|          | 0/13 [00:00<?, ?it/s]
-2020-11-11 11:44:10,191 - INFO - tqdm - accuracy: 0.6800, batch_loss: 2.0583, loss: 0.8988 ||: 100%|##########| 13/13 [00:00<00:00, 961.00it/s]
-2020-11-11 11:44:10,191 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
-2020-11-11 11:44:10,192 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.996  |     0.680
-2020-11-11 11:44:10,192 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     8.629  |       N/A
-2020-11-11 11:44:10,192 - INFO - allennlp.training.tensorboard_writer - loss               |     0.040  |     0.899
-2020-11-11 11:44:10,192 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  2963.355  |       N/A
-2020-11-11 11:44:10,196 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.157556
-2020-11-11 11:44:10,196 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:00
-2020-11-11 11:44:10,196 - INFO - allennlp.training.trainer - Epoch 4/4
-2020-11-11 11:44:10,196 - INFO - allennlp.training.trainer - Worker 0 memory usage: 2.9G
-2020-11-11 11:44:10,196 - INFO - allennlp.training.trainer - GPU 0 memory usage: 8.6M
-2020-11-11 11:44:10,196 - INFO - allennlp.training.trainer - Training
-2020-11-11 11:44:10,196 - INFO - tqdm - 0%|          | 0/69 [00:00<?, ?it/s]
-2020-11-11 11:44:10,339 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0135, loss: 0.0232 ||: 100%|##########| 69/69 [00:00<00:00, 482.87it/s]
-2020-11-11 11:44:10,341 - INFO - allennlp.training.trainer - Validating
-2020-11-11 11:44:10,341 - INFO - tqdm - 0%|          | 0/13 [00:00<?, ?it/s]
-2020-11-11 11:44:10,355 - INFO - tqdm - accuracy: 0.6800, batch_loss: 1.5521, loss: 0.9423 ||: 100%|##########| 13/13 [00:00<00:00, 960.15it/s]
-2020-11-11 11:44:10,355 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
-2020-11-11 11:44:10,355 - INFO - allennlp.training.tensorboard_writer - accuracy           |     1.000  |     0.680
-2020-11-11 11:44:10,355 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     8.629  |       N/A
-2020-11-11 11:44:10,355 - INFO - allennlp.training.tensorboard_writer - loss               |     0.023  |     0.942
-2020-11-11 11:44:10,356 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  2963.613  |       N/A
-2020-11-11 11:44:10,359 - INFO - allennlp.training.trainer - Epoch duration: 0:00:00.163346
-2020-11-11 11:44:10,359 - INFO - allennlp.training.checkpointer - loading best weights
-2020-11-11 11:44:10,361 - INFO - allennlp.common.util - Metrics: {
-  "best_epoch": 1,
-  "peak_worker_0_memory_MB": 2963.61328125,
-  "peak_gpu_0_memory_MB": 8.62939453125,
-  "training_duration": "0:00:00.993910",
+2020-11-11 20:21:03,953 - INFO - allennlp.common.params - random_seed = 13370
+2020-11-11 20:21:03,953 - INFO - allennlp.common.params - numpy_seed = 1337
+2020-11-11 20:21:03,953 - INFO - allennlp.common.params - pytorch_seed = 133
+2020-11-11 20:21:03,954 - INFO - allennlp.common.checks - Pytorch version: 1.7.0
+2020-11-11 20:21:03,954 - INFO - allennlp.common.params - type = default
+2020-11-11 20:21:03,954 - INFO - allennlp.common.params - dataset_reader.type = classification-tsv
+2020-11-11 20:21:03,954 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2020-11-11 20:21:03,954 - INFO - allennlp.common.params - dataset_reader.cache_directory = None
+2020-11-11 20:21:03,954 - INFO - allennlp.common.params - dataset_reader.max_instances = None
+2020-11-11 20:21:03,954 - INFO - allennlp.common.params - dataset_reader.manual_distributed_sharding = False
+2020-11-11 20:21:03,954 - INFO - allennlp.common.params - dataset_reader.manual_multi_process_sharding = False
+2020-11-11 20:21:03,954 - INFO - allennlp.common.params - dataset_reader.tokenizer = None
+2020-11-11 20:21:03,954 - INFO - allennlp.common.params - dataset_reader.token_indexers.elmo.type = elmo_characters
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - dataset_reader.token_indexers.elmo.namespace = elmo_characters
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - dataset_reader.token_indexers.elmo.tokens_to_add = None
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - dataset_reader.token_indexers.elmo.token_min_padding_length = 0
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - dataset_reader.max_tokens = None
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - train_data_path = data/train.text.trimmed.tsv
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - vocabulary = <allennlp.common.lazy.Lazy object at 0x7f6c74341850>
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - datasets_for_vocab_creation = None
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - validation_dataset_reader = None
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - validation_data_path = data/test.text.trimmed.tsv
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - validation_data_loader = None
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - test_data_path = None
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - evaluate_on_test = False
+2020-11-11 20:21:03,955 - INFO - allennlp.common.params - batch_weight_key = 
+2020-11-11 20:21:03,955 - INFO - allennlp.training.util - Reading training data from data/train.text.trimmed.tsv
+2020-11-11 20:21:03,956 - INFO - tqdm - reading instances: 0it [00:00, ?it/s]
+2020-11-11 20:21:04,445 - INFO - allennlp.training.util - Reading validation data from data/test.text.trimmed.tsv
+2020-11-11 20:21:04,446 - INFO - tqdm - reading instances: 0it [00:00, ?it/s]
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - type = from_instances
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - min_count = None
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - max_vocab_size = None
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - non_padded_namespaces = ('*tags', '*labels')
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - pretrained_files = None
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - only_include_pretrained_words = False
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - tokens_to_add = None
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - min_pretrained_embeddings = None
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - padding_token = @@PADDING@@
+2020-11-11 20:21:04,600 - INFO - allennlp.common.params - oov_token = @@UNKNOWN@@
+2020-11-11 20:21:04,601 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+2020-11-11 20:21:04,601 - INFO - tqdm - building vocab: 0it [00:00, ?it/s]
+2020-11-11 20:21:04,628 - INFO - allennlp.common.params - model.type = simple_classifier
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.type = basic
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.token_embedders.elmo.type = elmo_token_embedder
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.token_embedders.elmo.options_file = https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_options.json
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.token_embedders.elmo.weight_file = https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.token_embedders.elmo.do_layer_norm = False
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.token_embedders.elmo.dropout = 0
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.token_embedders.elmo.requires_grad = False
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.token_embedders.elmo.projection_dim = None
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.token_embedders.elmo.vocab_to_cache = None
+2020-11-11 20:21:04,629 - INFO - allennlp.common.params - model.embedder.token_embedders.elmo.scalar_mix_parameters = None
+2020-11-11 20:21:04,629 - INFO - allennlp.modules.elmo - Initializing ELMo
+2020-11-11 20:21:06,036 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_options.json is up-to-date
+2020-11-11 20:21:07,386 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:08,857 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:10,240 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:11,667 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:13,077 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:14,459 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:15,859 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:17,224 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:18,651 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:20,088 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:21,420 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_options.json is up-to-date
+2020-11-11 20:21:22,944 - INFO - allennlp.common.file_utils - cache of https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5 is up-to-date
+2020-11-11 20:21:23,095 - INFO - allennlp.common.params - model.encoder.type = lstm
+2020-11-11 20:21:23,095 - INFO - allennlp.common.params - model.encoder.input_size = 256
+2020-11-11 20:21:23,095 - INFO - allennlp.common.params - model.encoder.hidden_size = 50
+2020-11-11 20:21:23,095 - INFO - allennlp.common.params - model.encoder.num_layers = 1
+2020-11-11 20:21:23,095 - INFO - allennlp.common.params - model.encoder.bias = True
+2020-11-11 20:21:23,095 - INFO - allennlp.common.params - model.encoder.dropout = 0.0
+2020-11-11 20:21:23,095 - INFO - allennlp.common.params - model.encoder.bidirectional = True
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.type = pytorch_dataloader
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.batch_size = 2
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.shuffle = True
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.sampler = None
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.batch_sampler = None
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.pin_memory = False
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.drop_last = False
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.timeout = 0
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.type = pytorch_dataloader
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.batch_size = 2
+2020-11-11 20:21:23,097 - INFO - allennlp.common.params - data_loader.shuffle = True
+2020-11-11 20:21:23,098 - INFO - allennlp.common.params - data_loader.sampler = None
+2020-11-11 20:21:23,098 - INFO - allennlp.common.params - data_loader.batch_sampler = None
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - data_loader.pin_memory = False
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - data_loader.drop_last = False
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - data_loader.timeout = 0
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - trainer.type = gradient_descent
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - trainer.patience = 20
+2020-11-11 20:21:23,099 - INFO - allennlp.common.params - trainer.validation_metric = -loss
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.num_epochs = 5
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.cuda_device = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.grad_norm = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.distributed = False
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.world_size = 1
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.num_gradient_accumulation_steps = 1
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.use_amp = False
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.no_grad = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.optimizer = adam
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.learning_rate_scheduler = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.momentum_scheduler = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.tensorboard_writer = <allennlp.common.lazy.Lazy object at 0x7f6c74321a60>
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.moving_average = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.checkpointer = <allennlp.common.lazy.Lazy object at 0x7f6c74321b50>
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.batch_callbacks = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.epoch_callbacks = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.end_callbacks = None
+2020-11-11 20:21:23,100 - INFO - allennlp.common.params - trainer.trainer_callbacks = None
+2020-11-11 20:21:25,268 - INFO - allennlp.common.params - type = adam
+2020-11-11 20:21:25,268 - INFO - allennlp.common.params - parameter_groups = None
+2020-11-11 20:21:25,268 - INFO - allennlp.common.params - lr = 0.001
+2020-11-11 20:21:25,268 - INFO - allennlp.common.params - betas = (0.9, 0.999)
+2020-11-11 20:21:25,268 - INFO - allennlp.common.params - eps = 1e-08
+2020-11-11 20:21:25,268 - INFO - allennlp.common.params - weight_decay = 0.0
+2020-11-11 20:21:25,268 - INFO - allennlp.common.params - amsgrad = False
+2020-11-11 20:21:25,268 - INFO - allennlp.training.optimizers - Number of trainable parameters: 123406
+2020-11-11 20:21:25,268 - INFO - allennlp.common.util - The following parameters are Frozen (without gradient):
+2020-11-11 20:21:25,268 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder._char_embedding_weights
+2020-11-11 20:21:25,268 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_0.weight
+2020-11-11 20:21:25,268 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_0.bias
+2020-11-11 20:21:25,268 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_1.weight
+2020-11-11 20:21:25,268 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_1.bias
+2020-11-11 20:21:25,268 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_2.weight
+2020-11-11 20:21:25,268 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_2.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_3.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_3.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_4.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_4.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_5.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_5.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_6.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder.char_conv_6.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder._highways._layers.0.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder._highways._layers.0.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder._projection.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._token_embedder._projection.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.forward_layer_0.input_linearity.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.forward_layer_0.state_linearity.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.forward_layer_0.state_linearity.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.forward_layer_0.state_projection.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.backward_layer_0.input_linearity.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.backward_layer_0.state_linearity.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.backward_layer_0.state_linearity.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.backward_layer_0.state_projection.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.forward_layer_1.input_linearity.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.forward_layer_1.state_linearity.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.forward_layer_1.state_linearity.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.forward_layer_1.state_projection.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.backward_layer_1.input_linearity.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.backward_layer_1.state_linearity.weight
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.backward_layer_1.state_linearity.bias
+2020-11-11 20:21:25,269 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo._elmo_lstm._elmo_lstm.backward_layer_1.state_projection.weight
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - The following parameters are Tunable (with gradient):
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo.scalar_mix_0.gamma
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo.scalar_mix_0.scalar_parameters.0
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo.scalar_mix_0.scalar_parameters.1
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - embedder.token_embedder_elmo._elmo.scalar_mix_0.scalar_parameters.2
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - encoder._module.weight_ih_l0
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - encoder._module.weight_hh_l0
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - encoder._module.bias_ih_l0
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - encoder._module.bias_hh_l0
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - encoder._module.weight_ih_l0_reverse
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - encoder._module.weight_hh_l0_reverse
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - encoder._module.bias_ih_l0_reverse
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - encoder._module.bias_hh_l0_reverse
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - classifier.weight
+2020-11-11 20:21:25,270 - INFO - allennlp.common.util - classifier.bias
+2020-11-11 20:21:25,270 - INFO - allennlp.common.params - type = default
+2020-11-11 20:21:25,270 - INFO - allennlp.common.params - keep_serialized_model_every_num_seconds = None
+2020-11-11 20:21:25,270 - INFO - allennlp.common.params - num_serialized_models_to_keep = 2
+2020-11-11 20:21:25,270 - INFO - allennlp.common.params - model_save_interval = None
+2020-11-11 20:21:25,271 - INFO - allennlp.common.params - summary_interval = 100
+2020-11-11 20:21:25,271 - INFO - allennlp.common.params - histogram_interval = None
+2020-11-11 20:21:25,271 - INFO - allennlp.common.params - batch_size_interval = None
+2020-11-11 20:21:25,271 - INFO - allennlp.common.params - should_log_parameter_statistics = True
+2020-11-11 20:21:25,271 - INFO - allennlp.common.params - should_log_learning_rate = False
+2020-11-11 20:21:25,271 - INFO - allennlp.common.params - get_batch_num_total = None
+2020-11-11 20:21:25,272 - INFO - allennlp.training.trainer - Beginning training.
+2020-11-11 20:21:25,272 - INFO - allennlp.training.trainer - Epoch 0/4
+2020-11-11 20:21:25,272 - INFO - allennlp.training.trainer - Worker 0 memory usage: 2.7G
+2020-11-11 20:21:25,272 - INFO - allennlp.training.trainer - GPU 0 memory usage: 53M
+2020-11-11 20:21:25,272 - INFO - allennlp.training.trainer - Training
+2020-11-11 20:21:25,273 - INFO - tqdm - 0%|          | 0/273 [00:00<?, ?it/s]
+2020-11-11 20:21:37,942 - INFO - tqdm - accuracy: 0.3333, batch_loss: 0.7161, loss: 0.7181 ||:   2%|2         | 6/273 [00:12<09:47,  2.20s/it]
+2020-11-11 20:21:48,052 - INFO - tqdm - accuracy: 0.5000, batch_loss: 0.7005, loss: 0.6880 ||:   4%|4         | 12/273 [00:22<07:08,  1.64s/it]
+2020-11-11 20:21:59,453 - INFO - tqdm - accuracy: 0.4524, batch_loss: 0.6616, loss: 0.6982 ||:   8%|7         | 21/273 [00:34<06:47,  1.62s/it]
+2020-11-11 20:22:09,666 - INFO - tqdm - accuracy: 0.5500, batch_loss: 0.4433, loss: 0.6707 ||:  11%|#         | 30/273 [00:44<04:59,  1.23s/it]
+2020-11-11 20:22:19,930 - INFO - tqdm - accuracy: 0.5526, batch_loss: 0.3500, loss: 0.6681 ||:  14%|#3        | 38/273 [00:54<05:15,  1.34s/it]
+2020-11-11 20:22:30,427 - INFO - tqdm - accuracy: 0.5435, batch_loss: 0.6722, loss: 0.6661 ||:  17%|#6        | 46/273 [01:05<05:59,  1.58s/it]
+2020-11-11 20:22:41,577 - INFO - tqdm - accuracy: 0.5784, batch_loss: 0.8542, loss: 0.6566 ||:  19%|#8        | 51/273 [01:16<07:16,  1.97s/it]
+2020-11-11 20:22:52,759 - INFO - tqdm - accuracy: 0.6393, batch_loss: 0.4309, loss: 0.6293 ||:  22%|##2       | 61/273 [01:27<04:14,  1.20s/it]
+2020-11-11 20:23:04,096 - INFO - tqdm - accuracy: 0.6571, batch_loss: 0.9047, loss: 0.6075 ||:  26%|##5       | 70/273 [01:38<04:19,  1.28s/it]
+2020-11-11 20:23:14,416 - INFO - tqdm - accuracy: 0.6667, batch_loss: 0.5629, loss: 0.5884 ||:  30%|##9       | 81/273 [01:49<03:44,  1.17s/it]
+2020-11-11 20:23:24,506 - INFO - tqdm - accuracy: 0.6629, batch_loss: 0.3747, loss: 0.5950 ||:  33%|###2      | 89/273 [01:59<03:10,  1.03s/it]
+2020-11-11 20:23:34,616 - INFO - tqdm - accuracy: 0.6753, batch_loss: 0.3784, loss: 0.5847 ||:  36%|###5      | 97/273 [02:09<03:31,  1.20s/it]
+2020-11-11 20:23:45,794 - INFO - tqdm - accuracy: 0.6776, batch_loss: 1.1583, loss: 0.5905 ||:  39%|###9      | 107/273 [02:20<03:18,  1.20s/it]
+2020-11-11 20:23:56,795 - INFO - tqdm - accuracy: 0.6814, batch_loss: 0.9447, loss: 0.5925 ||:  41%|####1     | 113/273 [02:31<05:48,  2.18s/it]
+2020-11-11 20:24:07,177 - INFO - tqdm - accuracy: 0.6807, batch_loss: 0.4077, loss: 0.5954 ||:  44%|####3     | 119/273 [02:41<03:40,  1.43s/it]
+2020-11-11 20:24:18,368 - INFO - tqdm - accuracy: 0.6811, batch_loss: 0.5512, loss: 0.5880 ||:  47%|####6     | 127/273 [02:53<03:28,  1.43s/it]
+2020-11-11 20:24:29,809 - INFO - tqdm - accuracy: 0.6828, batch_loss: 0.4424, loss: 0.5859 ||:  49%|####9     | 134/273 [03:04<03:57,  1.71s/it]
+2020-11-11 20:24:41,018 - INFO - tqdm - accuracy: 0.6844, batch_loss: 0.5780, loss: 0.5866 ||:  52%|#####1    | 141/273 [03:15<03:53,  1.77s/it]
+2020-11-11 20:24:51,725 - INFO - tqdm - accuracy: 0.6821, batch_loss: 0.6035, loss: 0.5879 ||:  55%|#####5    | 151/273 [03:26<02:24,  1.19s/it]
+2020-11-11 20:25:02,514 - INFO - tqdm - accuracy: 0.6875, batch_loss: 0.6573, loss: 0.5803 ||:  59%|#####8    | 160/273 [03:37<03:08,  1.67s/it]
+2020-11-11 20:25:13,474 - INFO - tqdm - accuracy: 0.6976, batch_loss: 0.1363, loss: 0.5730 ||:  61%|######1   | 167/273 [03:48<02:56,  1.66s/it]
+2020-11-11 20:25:23,480 - INFO - tqdm - accuracy: 0.7000, batch_loss: 0.0986, loss: 0.5643 ||:  64%|######4   | 175/273 [03:58<01:37,  1.01it/s]
+2020-11-11 20:25:34,302 - INFO - tqdm - accuracy: 0.7033, batch_loss: 0.9733, loss: 0.5609 ||:  67%|######6   | 182/273 [04:09<02:57,  1.95s/it]
+2020-11-11 20:25:44,993 - INFO - tqdm - accuracy: 0.6962, batch_loss: 0.8477, loss: 0.5684 ||:  68%|######8   | 186/273 [04:19<03:51,  2.67s/it]
+2020-11-11 20:25:56,040 - INFO - tqdm - accuracy: 0.6958, batch_loss: 0.2589, loss: 0.5682 ||:  69%|######9   | 189/273 [04:30<04:20,  3.10s/it]
+2020-11-11 20:26:06,580 - INFO - tqdm - accuracy: 0.7050, batch_loss: 0.6476, loss: 0.5540 ||:  73%|#######3  | 200/273 [04:41<01:13,  1.00s/it]
+2020-11-11 20:26:18,461 - INFO - tqdm - accuracy: 0.7115, batch_loss: 0.3453, loss: 0.5473 ||:  76%|#######6  | 208/273 [04:53<01:47,  1.65s/it]
+2020-11-11 20:26:29,119 - INFO - tqdm - accuracy: 0.7110, batch_loss: 0.1726, loss: 0.5462 ||:  80%|#######9  | 218/273 [05:03<00:51,  1.07it/s]
+2020-11-11 20:26:39,914 - INFO - tqdm - accuracy: 0.7105, batch_loss: 0.3662, loss: 0.5471 ||:  84%|########3 | 228/273 [05:14<00:43,  1.03it/s]
+2020-11-11 20:26:51,232 - INFO - tqdm - accuracy: 0.7182, batch_loss: 0.7303, loss: 0.5373 ||:  86%|########6 | 236/273 [05:25<00:55,  1.50s/it]
+2020-11-11 20:27:02,616 - INFO - tqdm - accuracy: 0.7158, batch_loss: 0.3760, loss: 0.5416 ||:  88%|########8 | 241/273 [05:37<01:21,  2.54s/it]
+2020-11-11 20:27:13,644 - INFO - tqdm - accuracy: 0.7166, batch_loss: 0.5259, loss: 0.5444 ||:  90%|######### | 247/273 [05:48<00:50,  1.95s/it]
+2020-11-11 20:27:26,573 - INFO - tqdm - accuracy: 0.7165, batch_loss: 0.3074, loss: 0.5447 ||:  93%|#########3| 254/273 [06:01<00:44,  2.32s/it]
+2020-11-11 20:27:36,854 - INFO - tqdm - accuracy: 0.7201, batch_loss: 0.2378, loss: 0.5407 ||:  95%|#########4| 259/273 [06:11<00:31,  2.23s/it]
+2020-11-11 20:27:47,265 - INFO - tqdm - accuracy: 0.7228, batch_loss: 0.3909, loss: 0.5390 ||:  98%|#########7| 267/273 [06:21<00:10,  1.74s/it]
+2020-11-11 20:27:52,862 - INFO - tqdm - accuracy: 0.7206, batch_loss: 0.6849, loss: 0.5399 ||: 100%|#########9| 272/273 [06:27<00:01,  1.04s/it]
+2020-11-11 20:27:53,347 - INFO - tqdm - accuracy: 0.7211, batch_loss: 0.5080, loss: 0.5398 ||: 100%|##########| 273/273 [06:28<00:00,  1.14it/s]
+2020-11-11 20:27:53,347 - INFO - tqdm - accuracy: 0.7211, batch_loss: 0.5080, loss: 0.5398 ||: 100%|##########| 273/273 [06:28<00:00,  1.42s/it]
+2020-11-11 20:27:53,428 - INFO - allennlp.training.trainer - Validating
+2020-11-11 20:27:53,429 - INFO - tqdm - 0%|          | 0/50 [00:00<?, ?it/s]
+2020-11-11 20:28:03,858 - INFO - tqdm - accuracy: 0.7222, batch_loss: 0.6784, loss: 0.5758 ||:  18%|#8        | 9/50 [00:10<00:45,  1.10s/it]
+2020-11-11 20:28:14,060 - INFO - tqdm - accuracy: 0.6667, batch_loss: 0.4604, loss: 0.5926 ||:  24%|##4       | 12/50 [00:20<01:34,  2.48s/it]
+2020-11-11 20:28:24,192 - INFO - tqdm - accuracy: 0.6944, batch_loss: 0.5630, loss: 0.5474 ||:  36%|###6      | 18/50 [00:30<01:04,  2.00s/it]
+2020-11-11 20:28:34,271 - INFO - tqdm - accuracy: 0.6538, batch_loss: 1.2858, loss: 0.5835 ||:  52%|#####2    | 26/50 [00:40<00:29,  1.22s/it]
+2020-11-11 20:28:44,969 - INFO - tqdm - accuracy: 0.6562, batch_loss: 0.6602, loss: 0.6087 ||:  64%|######4   | 32/50 [00:51<00:24,  1.39s/it]
+2020-11-11 20:28:57,116 - INFO - tqdm - accuracy: 0.6500, batch_loss: 0.7884, loss: 0.6084 ||:  80%|########  | 40/50 [01:03<00:16,  1.70s/it]
+2020-11-11 20:29:15,666 - INFO - tqdm - accuracy: 0.6562, batch_loss: 0.2156, loss: 0.6370 ||:  96%|#########6| 48/50 [01:22<00:07,  3.56s/it]
+2020-11-11 20:29:17,445 - INFO - tqdm - accuracy: 0.6600, batch_loss: 0.5255, loss: 0.6353 ||: 100%|##########| 50/50 [01:24<00:00,  2.22s/it]
+2020-11-11 20:29:17,445 - INFO - tqdm - accuracy: 0.6600, batch_loss: 0.5255, loss: 0.6353 ||: 100%|##########| 50/50 [01:24<00:00,  1.68s/it]
+2020-11-11 20:29:17,445 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-11-11 20:29:17,446 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.721  |     0.660
+2020-11-11 20:29:17,446 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |    52.799  |       N/A
+2020-11-11 20:29:17,447 - INFO - allennlp.training.tensorboard_writer - loss               |     0.540  |     0.635
+2020-11-11 20:29:17,447 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  2800.789  |       N/A
+2020-11-11 20:29:17,452 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to 'results//best.th'.
+2020-11-11 20:29:17,472 - INFO - allennlp.training.trainer - Epoch duration: 0:07:52.199374
+2020-11-11 20:29:17,472 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:31:28
+2020-11-11 20:29:17,472 - INFO - allennlp.training.trainer - Epoch 1/4
+2020-11-11 20:29:17,472 - INFO - allennlp.training.trainer - Worker 0 memory usage: 3.6G
+2020-11-11 20:29:17,472 - INFO - allennlp.training.trainer - GPU 0 memory usage: 4.9G
+2020-11-11 20:29:17,472 - INFO - allennlp.training.trainer - Training
+2020-11-11 20:29:17,472 - INFO - tqdm - 0%|          | 0/273 [00:00<?, ?it/s]
+2020-11-11 20:29:28,631 - INFO - tqdm - accuracy: 0.9000, batch_loss: 0.3103, loss: 0.2878 ||:   4%|3         | 10/273 [00:11<05:39,  1.29s/it]
+2020-11-11 20:29:39,666 - INFO - tqdm - accuracy: 0.8235, batch_loss: 0.4785, loss: 0.3474 ||:   6%|6         | 17/273 [00:22<05:42,  1.34s/it]
+2020-11-11 20:29:50,682 - INFO - tqdm - accuracy: 0.8889, batch_loss: 0.1814, loss: 0.3004 ||:  10%|9         | 27/273 [00:33<04:27,  1.09s/it]
+2020-11-11 20:30:01,498 - INFO - tqdm - accuracy: 0.8553, batch_loss: 0.0837, loss: 0.3657 ||:  14%|#3        | 38/273 [00:44<03:57,  1.01s/it]
+2020-11-11 20:30:11,703 - INFO - tqdm - accuracy: 0.8690, batch_loss: 0.1611, loss: 0.3517 ||:  15%|#5        | 42/273 [00:54<06:34,  1.71s/it]
+2020-11-11 20:30:23,409 - INFO - tqdm - accuracy: 0.8776, batch_loss: 0.0854, loss: 0.3319 ||:  18%|#7        | 49/273 [01:05<06:37,  1.78s/it]
+2020-11-11 20:30:34,037 - INFO - tqdm - accuracy: 0.8796, batch_loss: 0.1426, loss: 0.3288 ||:  20%|#9        | 54/273 [01:16<06:43,  1.84s/it]
+2020-11-11 20:30:45,747 - INFO - tqdm - accuracy: 0.8750, batch_loss: 0.1551, loss: 0.3206 ||:  23%|##3       | 64/273 [01:28<04:53,  1.40s/it]
+2020-11-11 20:30:58,558 - INFO - tqdm - accuracy: 0.8699, batch_loss: 0.5080, loss: 0.3403 ||:  27%|##6       | 73/273 [01:41<05:50,  1.75s/it]
+2020-11-11 20:31:08,925 - INFO - tqdm - accuracy: 0.8671, batch_loss: 0.0513, loss: 0.3378 ||:  29%|##8       | 79/273 [01:51<05:25,  1.68s/it]
+2020-11-11 20:31:19,020 - INFO - tqdm - accuracy: 0.8663, batch_loss: 0.1263, loss: 0.3289 ||:  32%|###1      | 86/273 [02:01<04:23,  1.41s/it]
+2020-11-11 20:31:29,486 - INFO - tqdm - accuracy: 0.8646, batch_loss: 0.0372, loss: 0.3211 ||:  35%|###5      | 96/273 [02:12<02:28,  1.19it/s]
+2020-11-11 20:31:39,502 - INFO - tqdm - accuracy: 0.8702, batch_loss: 0.0283, loss: 0.3184 ||:  38%|###8      | 104/273 [02:22<04:52,  1.73s/it]
+2020-11-11 20:31:50,522 - INFO - tqdm - accuracy: 0.8717, batch_loss: 0.0881, loss: 0.3204 ||:  41%|####1     | 113/273 [02:33<03:52,  1.46s/it]
+2020-11-11 20:32:01,856 - INFO - tqdm - accuracy: 0.8730, batch_loss: 1.2151, loss: 0.3179 ||:  45%|####4     | 122/273 [02:44<03:39,  1.46s/it]
+2020-11-11 20:32:13,411 - INFO - tqdm - accuracy: 0.8779, batch_loss: 0.5173, loss: 0.3076 ||:  48%|####7     | 131/273 [02:55<03:45,  1.59s/it]
+2020-11-11 20:32:23,869 - INFO - tqdm - accuracy: 0.8750, batch_loss: 1.0542, loss: 0.3155 ||:  50%|####9     | 136/273 [03:06<04:12,  1.85s/it]
+2020-11-11 20:32:34,774 - INFO - tqdm - accuracy: 0.8697, batch_loss: 0.3445, loss: 0.3191 ||:  52%|#####2    | 142/273 [03:17<04:11,  1.92s/it]
+2020-11-11 20:32:45,648 - INFO - tqdm - accuracy: 0.8595, batch_loss: 0.1073, loss: 0.3347 ||:  56%|#####6    | 153/273 [03:28<02:17,  1.15s/it]
+2020-11-11 20:32:56,094 - INFO - tqdm - accuracy: 0.8594, batch_loss: 0.7657, loss: 0.3349 ||:  59%|#####8    | 160/273 [03:38<02:28,  1.31s/it]
+2020-11-11 20:33:06,270 - INFO - tqdm - accuracy: 0.8609, batch_loss: 0.6138, loss: 0.3330 ||:  62%|######1   | 169/273 [03:48<02:30,  1.45s/it]
+2020-11-11 20:33:17,924 - INFO - tqdm - accuracy: 0.8596, batch_loss: 1.1555, loss: 0.3355 ||:  65%|######5   | 178/273 [04:00<02:11,  1.39s/it]
+2020-11-11 20:33:28,103 - INFO - tqdm - accuracy: 0.8568, batch_loss: 0.3699, loss: 0.3384 ||:  68%|######7   | 185/273 [04:10<02:12,  1.50s/it]
+2020-11-11 20:33:40,823 - INFO - tqdm - accuracy: 0.8590, batch_loss: 0.8162, loss: 0.3416 ||:  71%|#######1  | 195/273 [04:23<02:08,  1.65s/it]
+2020-11-11 20:33:58,260 - INFO - tqdm - accuracy: 0.8561, batch_loss: 1.2073, loss: 0.3405 ||:  75%|#######5  | 205/273 [04:40<03:43,  3.29s/it]
+2020-11-11 20:34:08,528 - INFO - tqdm - accuracy: 0.8507, batch_loss: 0.2909, loss: 0.3464 ||:  77%|#######7  | 211/273 [04:51<01:51,  1.79s/it]
+2020-11-11 20:34:19,192 - INFO - tqdm - accuracy: 0.8493, batch_loss: 1.3817, loss: 0.3483 ||:  80%|########  | 219/273 [05:01<01:21,  1.50s/it]
+2020-11-11 20:34:30,506 - INFO - tqdm - accuracy: 0.8540, batch_loss: 0.3383, loss: 0.3459 ||:  83%|########2 | 226/273 [05:13<01:27,  1.87s/it]
+2020-11-11 20:34:41,036 - INFO - tqdm - accuracy: 0.8526, batch_loss: 0.2525, loss: 0.3481 ||:  86%|########5 | 234/273 [05:23<00:50,  1.30s/it]
+2020-11-11 20:34:52,130 - INFO - tqdm - accuracy: 0.8542, batch_loss: 0.3970, loss: 0.3510 ||:  88%|########7 | 240/273 [05:34<00:55,  1.67s/it]
+2020-11-11 20:35:02,608 - INFO - tqdm - accuracy: 0.8557, batch_loss: 0.0072, loss: 0.3484 ||:  90%|######### | 246/273 [05:45<00:45,  1.69s/it]
+2020-11-11 20:35:13,598 - INFO - tqdm - accuracy: 0.8518, batch_loss: 0.8019, loss: 0.3558 ||:  93%|#########2| 253/273 [05:56<00:31,  1.55s/it]
+2020-11-11 20:35:24,583 - INFO - tqdm - accuracy: 0.8516, batch_loss: 0.1730, loss: 0.3555 ||:  94%|#########3| 256/273 [06:07<00:45,  2.69s/it]
+2020-11-11 20:35:34,807 - INFO - tqdm - accuracy: 0.8523, batch_loss: 0.1296, loss: 0.3566 ||:  97%|#########6| 264/273 [06:17<00:12,  1.43s/it]
+2020-11-11 20:35:44,962 - INFO - tqdm - accuracy: 0.8548, batch_loss: 0.1369, loss: 0.3521 ||: 100%|#########9| 272/273 [06:27<00:01,  1.65s/it]
+2020-11-11 20:35:46,250 - INFO - tqdm - accuracy: 0.8550, batch_loss: 0.4131, loss: 0.3524 ||: 100%|##########| 273/273 [06:28<00:00,  1.54s/it]
+2020-11-11 20:35:46,250 - INFO - tqdm - accuracy: 0.8550, batch_loss: 0.4131, loss: 0.3524 ||: 100%|##########| 273/273 [06:28<00:00,  1.42s/it]
+2020-11-11 20:35:46,333 - INFO - allennlp.training.trainer - Validating
+2020-11-11 20:35:46,333 - INFO - tqdm - 0%|          | 0/50 [00:00<?, ?it/s]
+2020-11-11 20:36:04,973 - INFO - tqdm - accuracy: 0.6111, batch_loss: 0.5950, loss: 0.8021 ||:  18%|#8        | 9/50 [00:18<02:23,  3.49s/it]
+2020-11-11 20:36:15,344 - INFO - tqdm - accuracy: 0.6429, batch_loss: 0.2804, loss: 0.7381 ||:  28%|##8       | 14/50 [00:29<01:19,  2.21s/it]
+2020-11-11 20:36:26,465 - INFO - tqdm - accuracy: 0.6750, batch_loss: 0.4537, loss: 0.7631 ||:  40%|####      | 20/50 [00:40<01:06,  2.20s/it]
+2020-11-11 20:36:37,812 - INFO - tqdm - accuracy: 0.6296, batch_loss: 0.5383, loss: 0.7817 ||:  54%|#####4    | 27/50 [00:51<00:45,  2.00s/it]
+2020-11-11 20:36:47,878 - INFO - tqdm - accuracy: 0.6571, batch_loss: 0.2126, loss: 0.7172 ||:  70%|#######   | 35/50 [01:01<00:18,  1.25s/it]
+2020-11-11 20:36:57,970 - INFO - tqdm - accuracy: 0.6667, batch_loss: 1.2369, loss: 0.6826 ||:  90%|######### | 45/50 [01:11<00:05,  1.07s/it]
+2020-11-11 20:37:05,828 - INFO - tqdm - accuracy: 0.6700, batch_loss: 0.3032, loss: 0.6597 ||: 100%|##########| 50/50 [01:19<00:00,  1.88s/it]
+2020-11-11 20:37:05,829 - INFO - tqdm - accuracy: 0.6700, batch_loss: 0.3032, loss: 0.6597 ||: 100%|##########| 50/50 [01:19<00:00,  1.59s/it]
+2020-11-11 20:37:05,829 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-11-11 20:37:05,829 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.855  |     0.670
+2020-11-11 20:37:05,829 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  5001.279  |       N/A
+2020-11-11 20:37:05,829 - INFO - allennlp.training.tensorboard_writer - loss               |     0.352  |     0.660
+2020-11-11 20:37:05,830 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  3689.645  |       N/A
+2020-11-11 20:37:05,833 - INFO - allennlp.training.trainer - Epoch duration: 0:07:48.360799
+2020-11-11 20:37:05,833 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:23:30
+2020-11-11 20:37:05,833 - INFO - allennlp.training.trainer - Epoch 2/4
+2020-11-11 20:37:05,833 - INFO - allennlp.training.trainer - Worker 0 memory usage: 3.7G
+2020-11-11 20:37:05,833 - INFO - allennlp.training.trainer - GPU 0 memory usage: 4.9G
+2020-11-11 20:37:05,833 - INFO - allennlp.training.trainer - Training
+2020-11-11 20:37:05,833 - INFO - tqdm - 0%|          | 0/273 [00:00<?, ?it/s]
+2020-11-11 20:37:17,486 - INFO - tqdm - accuracy: 0.9286, batch_loss: 0.6785, loss: 0.2244 ||:   3%|2         | 7/273 [00:11<07:44,  1.75s/it]
+2020-11-11 20:37:30,052 - INFO - tqdm - accuracy: 0.9615, batch_loss: 0.0960, loss: 0.1558 ||:   5%|4         | 13/273 [00:24<12:43,  2.94s/it]
+2020-11-11 20:37:40,497 - INFO - tqdm - accuracy: 0.9500, batch_loss: 0.0551, loss: 0.1754 ||:   7%|7         | 20/273 [00:34<06:38,  1.58s/it]
+2020-11-11 20:37:51,236 - INFO - tqdm - accuracy: 0.9615, batch_loss: 0.1156, loss: 0.1797 ||:  10%|9         | 26/273 [00:45<06:45,  1.64s/it]
+2020-11-11 20:38:01,647 - INFO - tqdm - accuracy: 0.9583, batch_loss: 0.0858, loss: 0.1793 ||:  13%|#3        | 36/273 [00:55<04:49,  1.22s/it]
+2020-11-11 20:38:11,775 - INFO - tqdm - accuracy: 0.9659, batch_loss: 0.0170, loss: 0.1604 ||:  16%|#6        | 44/273 [01:05<04:39,  1.22s/it]
+2020-11-11 20:38:23,993 - INFO - tqdm - accuracy: 0.9623, batch_loss: 0.2013, loss: 0.1821 ||:  19%|#9        | 53/273 [01:18<05:56,  1.62s/it]
+2020-11-11 20:38:35,744 - INFO - tqdm - accuracy: 0.9655, batch_loss: 0.0915, loss: 0.1736 ||:  21%|##1       | 58/273 [01:29<08:37,  2.41s/it]
+2020-11-11 20:38:46,873 - INFO - tqdm - accuracy: 0.9706, batch_loss: 0.3190, loss: 0.1635 ||:  25%|##4       | 68/273 [01:41<05:04,  1.49s/it]
+2020-11-11 20:38:56,875 - INFO - tqdm - accuracy: 0.9662, batch_loss: 0.0088, loss: 0.1695 ||:  27%|##7       | 74/273 [01:51<05:34,  1.68s/it]
+2020-11-11 20:39:06,941 - INFO - tqdm - accuracy: 0.9706, batch_loss: 0.2050, loss: 0.1632 ||:  31%|###1      | 85/273 [02:01<02:14,  1.40it/s]
+2020-11-11 20:39:22,346 - INFO - tqdm - accuracy: 0.9620, batch_loss: 0.8399, loss: 0.1727 ||:  34%|###3      | 92/273 [02:16<09:25,  3.12s/it]
+2020-11-11 20:39:32,837 - INFO - tqdm - accuracy: 0.9592, batch_loss: 0.2070, loss: 0.1733 ||:  36%|###5      | 98/273 [02:27<05:23,  1.85s/it]
+2020-11-11 20:39:42,969 - INFO - tqdm - accuracy: 0.9528, batch_loss: 0.4423, loss: 0.1701 ||:  39%|###8      | 106/273 [02:37<03:44,  1.35s/it]
+2020-11-11 20:39:53,676 - INFO - tqdm - accuracy: 0.9550, batch_loss: 0.0084, loss: 0.1699 ||:  41%|####      | 111/273 [02:47<07:25,  2.75s/it]
+2020-11-11 20:40:03,720 - INFO - tqdm - accuracy: 0.9542, batch_loss: 0.0231, loss: 0.1677 ||:  44%|####3     | 120/273 [02:57<03:38,  1.43s/it]
+2020-11-11 20:40:14,205 - INFO - tqdm - accuracy: 0.9570, batch_loss: 0.0060, loss: 0.1649 ||:  47%|####6     | 128/273 [03:08<03:16,  1.35s/it]
+2020-11-11 20:40:26,852 - INFO - tqdm - accuracy: 0.9556, batch_loss: 0.0164, loss: 0.1667 ||:  49%|####9     | 135/273 [03:21<06:10,  2.69s/it]
+2020-11-11 20:40:37,098 - INFO - tqdm - accuracy: 0.9536, batch_loss: 0.1329, loss: 0.1663 ||:  51%|#####1    | 140/273 [03:31<04:08,  1.87s/it]
+2020-11-11 20:40:47,158 - INFO - tqdm - accuracy: 0.9493, batch_loss: 1.7206, loss: 0.1828 ||:  54%|#####4    | 148/273 [03:41<02:12,  1.06s/it]
+2020-11-11 20:40:57,972 - INFO - tqdm - accuracy: 0.9419, batch_loss: 1.1452, loss: 0.1938 ||:  57%|#####6    | 155/273 [03:52<02:40,  1.36s/it]
+2020-11-11 20:41:08,540 - INFO - tqdm - accuracy: 0.9444, batch_loss: 0.0452, loss: 0.1902 ||:  59%|#####9    | 162/273 [04:02<02:34,  1.40s/it]
+2020-11-11 20:41:19,221 - INFO - tqdm - accuracy: 0.9435, batch_loss: 0.1082, loss: 0.1923 ||:  62%|######1   | 168/273 [04:13<02:53,  1.65s/it]
+2020-11-11 20:41:29,887 - INFO - tqdm - accuracy: 0.9432, batch_loss: 0.1076, loss: 0.1907 ||:  64%|######4   | 176/273 [04:24<02:55,  1.81s/it]
+2020-11-11 20:41:40,484 - INFO - tqdm - accuracy: 0.9447, batch_loss: 0.6038, loss: 0.1848 ||:  70%|######9   | 190/273 [04:34<01:16,  1.09it/s]
+2020-11-11 20:41:51,461 - INFO - tqdm - accuracy: 0.9447, batch_loss: 0.0206, loss: 0.1856 ||:  73%|#######2  | 199/273 [04:45<01:29,  1.21s/it]
+2020-11-11 20:42:01,976 - INFO - tqdm - accuracy: 0.9399, batch_loss: 0.0552, loss: 0.1914 ||:  76%|#######6  | 208/273 [04:56<01:33,  1.44s/it]
+2020-11-11 20:42:12,670 - INFO - tqdm - accuracy: 0.9375, batch_loss: 0.0633, loss: 0.1925 ||:  79%|#######9  | 216/273 [05:06<01:20,  1.41s/it]
+2020-11-11 20:42:23,931 - INFO - tqdm - accuracy: 0.9392, batch_loss: 0.3684, loss: 0.1901 ||:  81%|########1 | 222/273 [05:18<01:34,  1.86s/it]
+2020-11-11 20:42:34,275 - INFO - tqdm - accuracy: 0.9391, batch_loss: 0.0187, loss: 0.1887 ||:  84%|########4 | 230/273 [05:28<00:48,  1.13s/it]
+2020-11-11 20:42:44,797 - INFO - tqdm - accuracy: 0.9388, batch_loss: 0.0467, loss: 0.1870 ||:  87%|########6 | 237/273 [05:38<00:41,  1.16s/it]
+2020-11-11 20:42:54,948 - INFO - tqdm - accuracy: 0.9388, batch_loss: 0.3974, loss: 0.1851 ||:  90%|########9 | 245/273 [05:49<00:33,  1.20s/it]
+2020-11-11 20:43:05,181 - INFO - tqdm - accuracy: 0.9387, batch_loss: 0.0027, loss: 0.1853 ||:  93%|#########2| 253/273 [05:59<00:25,  1.26s/it]
+2020-11-11 20:43:16,041 - INFO - tqdm - accuracy: 0.9349, batch_loss: 0.0292, loss: 0.1880 ||:  96%|#########5| 261/273 [06:10<00:15,  1.26s/it]
+2020-11-11 20:43:26,593 - INFO - tqdm - accuracy: 0.9333, batch_loss: 0.0471, loss: 0.1958 ||:  99%|#########8| 270/273 [06:20<00:04,  1.40s/it]
+2020-11-11 20:43:29,925 - INFO - tqdm - accuracy: 0.9338, batch_loss: 0.0152, loss: 0.1951 ||: 100%|#########9| 272/273 [06:24<00:01,  1.62s/it]
+2020-11-11 20:43:31,233 - INFO - tqdm - accuracy: 0.9321, batch_loss: 1.1427, loss: 0.1986 ||: 100%|##########| 273/273 [06:25<00:00,  1.53s/it]
+2020-11-11 20:43:31,233 - INFO - tqdm - accuracy: 0.9321, batch_loss: 1.1427, loss: 0.1986 ||: 100%|##########| 273/273 [06:25<00:00,  1.41s/it]
+2020-11-11 20:43:31,315 - INFO - allennlp.training.trainer - Validating
+2020-11-11 20:43:31,315 - INFO - tqdm - 0%|          | 0/50 [00:00<?, ?it/s]
+2020-11-11 20:43:41,675 - INFO - tqdm - accuracy: 0.6000, batch_loss: 0.8521, loss: 0.8974 ||:  10%|#         | 5/50 [00:10<01:27,  1.95s/it]
+2020-11-11 20:43:52,718 - INFO - tqdm - accuracy: 0.6786, batch_loss: 0.0824, loss: 0.7840 ||:  28%|##8       | 14/50 [00:21<00:50,  1.39s/it]
+2020-11-11 20:44:02,954 - INFO - tqdm - accuracy: 0.6500, batch_loss: 3.7334, loss: 0.8606 ||:  40%|####      | 20/50 [00:31<00:43,  1.44s/it]
+2020-11-11 20:44:14,377 - INFO - tqdm - accuracy: 0.6591, batch_loss: 0.7934, loss: 0.8209 ||:  44%|####4     | 22/50 [00:43<01:50,  3.94s/it]
+2020-11-11 20:44:26,147 - INFO - tqdm - accuracy: 0.6500, batch_loss: 1.8914, loss: 0.9110 ||:  60%|######    | 30/50 [00:54<00:36,  1.85s/it]
+2020-11-11 20:44:36,388 - INFO - tqdm - accuracy: 0.6216, batch_loss: 0.2673, loss: 0.9724 ||:  74%|#######4  | 37/50 [01:05<00:17,  1.33s/it]
+2020-11-11 20:44:46,915 - INFO - tqdm - accuracy: 0.6444, batch_loss: 0.5487, loss: 0.9111 ||:  90%|######### | 45/50 [01:15<00:06,  1.23s/it]
+2020-11-11 20:44:54,193 - INFO - tqdm - accuracy: 0.6500, batch_loss: 0.2758, loss: 0.8749 ||: 100%|##########| 50/50 [01:22<00:00,  1.54s/it]
+2020-11-11 20:44:54,193 - INFO - tqdm - accuracy: 0.6500, batch_loss: 0.2758, loss: 0.8749 ||: 100%|##########| 50/50 [01:22<00:00,  1.66s/it]
+2020-11-11 20:44:54,194 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-11-11 20:44:54,194 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.932  |     0.650
+2020-11-11 20:44:54,194 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  5001.279  |       N/A
+2020-11-11 20:44:54,194 - INFO - allennlp.training.tensorboard_writer - loss               |     0.199  |     0.875
+2020-11-11 20:44:54,195 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  3785.742  |       N/A
+2020-11-11 20:44:54,201 - INFO - allennlp.training.trainer - Epoch duration: 0:07:48.368469
+2020-11-11 20:44:54,201 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:15:39
+2020-11-11 20:44:54,201 - INFO - allennlp.training.trainer - Epoch 3/4
+2020-11-11 20:44:54,201 - INFO - allennlp.training.trainer - Worker 0 memory usage: 3.7G
+2020-11-11 20:44:54,202 - INFO - allennlp.training.trainer - GPU 0 memory usage: 4.9G
+2020-11-11 20:44:54,202 - INFO - allennlp.training.trainer - Training
+2020-11-11 20:44:54,202 - INFO - tqdm - 0%|          | 0/273 [00:00<?, ?it/s]
+2020-11-11 20:45:06,084 - INFO - tqdm - accuracy: 0.9444, batch_loss: 0.0617, loss: 0.1234 ||:   3%|3         | 9/273 [00:11<06:16,  1.43s/it]
+2020-11-11 20:45:16,495 - INFO - tqdm - accuracy: 0.9375, batch_loss: 0.0145, loss: 0.1418 ||:   6%|5         | 16/273 [00:22<04:42,  1.10s/it]
+2020-11-11 20:45:27,544 - INFO - tqdm - accuracy: 0.9200, batch_loss: 0.0339, loss: 0.1486 ||:   9%|9         | 25/273 [00:33<05:09,  1.25s/it]
+2020-11-11 20:45:37,577 - INFO - tqdm - accuracy: 0.9394, batch_loss: 0.0791, loss: 0.1293 ||:  12%|#2        | 33/273 [00:43<05:35,  1.40s/it]
+2020-11-11 20:45:47,766 - INFO - tqdm - accuracy: 0.9535, batch_loss: 0.0333, loss: 0.1074 ||:  16%|#5        | 43/273 [00:53<02:50,  1.35it/s]
+2020-11-11 20:45:58,034 - INFO - tqdm - accuracy: 0.9600, batch_loss: 0.1272, loss: 0.0988 ||:  18%|#8        | 50/273 [01:03<04:35,  1.24s/it]
+2020-11-11 20:46:09,060 - INFO - tqdm - accuracy: 0.9636, batch_loss: 0.0055, loss: 0.0935 ||:  20%|##        | 55/273 [01:14<05:33,  1.53s/it]
+2020-11-11 20:46:19,407 - INFO - tqdm - accuracy: 0.9590, batch_loss: 0.1756, loss: 0.0994 ||:  22%|##2       | 61/273 [01:25<05:53,  1.67s/it]
+2020-11-11 20:46:33,590 - INFO - tqdm - accuracy: 0.9643, batch_loss: 0.2161, loss: 0.0938 ||:  26%|##5       | 70/273 [01:39<06:58,  2.06s/it]
+2020-11-11 20:46:43,784 - INFO - tqdm - accuracy: 0.9671, batch_loss: 0.0044, loss: 0.0939 ||:  28%|##7       | 76/273 [01:49<05:20,  1.63s/it]
+2020-11-11 20:46:55,303 - INFO - tqdm - accuracy: 0.9706, batch_loss: 0.0347, loss: 0.0879 ||:  31%|###1      | 85/273 [02:01<04:13,  1.35s/it]
+2020-11-11 20:47:05,743 - INFO - tqdm - accuracy: 0.9725, batch_loss: 0.2180, loss: 0.0866 ||:  33%|###3      | 91/273 [02:11<05:37,  1.85s/it]
+2020-11-11 20:47:18,103 - INFO - tqdm - accuracy: 0.9657, batch_loss: 0.0134, loss: 0.0940 ||:  37%|###7      | 102/273 [02:23<04:25,  1.55s/it]
+2020-11-11 20:47:29,647 - INFO - tqdm - accuracy: 0.9643, batch_loss: 0.0239, loss: 0.0936 ||:  41%|####1     | 112/273 [02:35<03:40,  1.37s/it]
+2020-11-11 20:47:40,182 - INFO - tqdm - accuracy: 0.9667, batch_loss: 0.0028, loss: 0.0935 ||:  44%|####3     | 120/273 [02:45<03:18,  1.30s/it]
+2020-11-11 20:47:51,240 - INFO - tqdm - accuracy: 0.9675, batch_loss: 0.1020, loss: 0.0923 ||:  45%|####5     | 123/273 [02:57<06:26,  2.58s/it]
+2020-11-11 20:48:02,196 - INFO - tqdm - accuracy: 0.9690, batch_loss: 0.0683, loss: 0.0917 ||:  47%|####7     | 129/273 [03:07<05:02,  2.10s/it]
+2020-11-11 20:48:12,625 - INFO - tqdm - accuracy: 0.9708, batch_loss: 0.0348, loss: 0.0880 ||:  50%|#####     | 137/273 [03:18<03:35,  1.59s/it]
+2020-11-11 20:48:24,302 - INFO - tqdm - accuracy: 0.9732, batch_loss: 0.0180, loss: 0.0840 ||:  55%|#####4    | 149/273 [03:30<02:31,  1.22s/it]
+2020-11-11 20:48:34,373 - INFO - tqdm - accuracy: 0.9745, batch_loss: 0.1786, loss: 0.0837 ||:  58%|#####7    | 157/273 [03:40<02:03,  1.06s/it]
+2020-11-11 20:48:45,278 - INFO - tqdm - accuracy: 0.9727, batch_loss: 0.0021, loss: 0.0839 ||:  60%|######    | 165/273 [03:51<02:21,  1.31s/it]
+2020-11-11 20:48:55,997 - INFO - tqdm - accuracy: 0.9738, batch_loss: 0.2663, loss: 0.0834 ||:  63%|######3   | 172/273 [04:01<02:07,  1.26s/it]
+2020-11-11 20:49:06,556 - INFO - tqdm - accuracy: 0.9753, batch_loss: 0.0092, loss: 0.0851 ||:  67%|######6   | 182/273 [04:12<01:23,  1.09it/s]
+2020-11-11 20:49:17,532 - INFO - tqdm - accuracy: 0.9761, batch_loss: 0.0853, loss: 0.0833 ||:  69%|######8   | 188/273 [04:23<02:38,  1.86s/it]
+2020-11-11 20:49:27,635 - INFO - tqdm - accuracy: 0.9768, batch_loss: 0.1849, loss: 0.0826 ||:  71%|#######1  | 194/273 [04:33<02:10,  1.65s/it]
+2020-11-11 20:49:39,207 - INFO - tqdm - accuracy: 0.9726, batch_loss: 0.5587, loss: 0.0935 ||:  74%|#######3  | 201/273 [04:45<02:22,  1.98s/it]
+2020-11-11 20:49:49,723 - INFO - tqdm - accuracy: 0.9713, batch_loss: 0.1219, loss: 0.0968 ||:  77%|#######6  | 209/273 [04:55<01:26,  1.36s/it]
+2020-11-11 20:49:59,988 - INFO - tqdm - accuracy: 0.9700, batch_loss: 0.0623, loss: 0.0962 ||:  79%|#######9  | 217/273 [05:05<01:02,  1.12s/it]
+2020-11-11 20:50:10,529 - INFO - tqdm - accuracy: 0.9688, batch_loss: 0.3681, loss: 0.0995 ||:  82%|########2 | 224/273 [05:16<01:12,  1.49s/it]
+2020-11-11 20:50:24,391 - INFO - tqdm - accuracy: 0.9674, batch_loss: 0.6230, loss: 0.1004 ||:  84%|########4 | 230/273 [05:30<02:20,  3.26s/it]
+2020-11-11 20:50:34,918 - INFO - tqdm - accuracy: 0.9662, batch_loss: 0.0199, loss: 0.1013 ||:  87%|########6 | 237/273 [05:40<01:09,  1.93s/it]
+2020-11-11 20:50:45,082 - INFO - tqdm - accuracy: 0.9656, batch_loss: 0.2850, loss: 0.1024 ||:  90%|######### | 247/273 [05:50<00:30,  1.19s/it]
+2020-11-11 20:50:55,780 - INFO - tqdm - accuracy: 0.9664, batch_loss: 0.1890, loss: 0.1023 ||:  93%|#########2| 253/273 [06:01<00:36,  1.81s/it]
+2020-11-11 20:51:06,990 - INFO - tqdm - accuracy: 0.9677, batch_loss: 0.0539, loss: 0.0996 ||:  96%|#########6| 263/273 [06:12<00:12,  1.24s/it]
+2020-11-11 20:51:18,216 - INFO - tqdm - accuracy: 0.9685, batch_loss: 0.0941, loss: 0.0995 ||:  99%|#########8| 270/273 [06:24<00:04,  1.40s/it]
+2020-11-11 20:51:21,182 - INFO - tqdm - accuracy: 0.9688, batch_loss: 0.0749, loss: 0.0991 ||: 100%|#########9| 272/273 [06:26<00:01,  1.42s/it]
+2020-11-11 20:51:21,839 - INFO - tqdm - accuracy: 0.9688, batch_loss: 0.0337, loss: 0.0988 ||: 100%|##########| 273/273 [06:27<00:00,  1.19s/it]
+2020-11-11 20:51:21,839 - INFO - tqdm - accuracy: 0.9688, batch_loss: 0.0337, loss: 0.0988 ||: 100%|##########| 273/273 [06:27<00:00,  1.42s/it]
+2020-11-11 20:51:21,925 - INFO - allennlp.training.trainer - Validating
+2020-11-11 20:51:21,925 - INFO - tqdm - 0%|          | 0/50 [00:00<?, ?it/s]
+2020-11-11 20:51:32,036 - INFO - tqdm - accuracy: 0.7143, batch_loss: 3.4526, loss: 1.0009 ||:  14%|#4        | 7/50 [00:10<00:57,  1.34s/it]
+2020-11-11 20:51:42,964 - INFO - tqdm - accuracy: 0.6154, batch_loss: 0.1497, loss: 0.9511 ||:  26%|##6       | 13/50 [00:21<01:02,  1.68s/it]
+2020-11-11 20:51:54,087 - INFO - tqdm - accuracy: 0.5750, batch_loss: 1.2077, loss: 0.9268 ||:  40%|####      | 20/50 [00:32<00:45,  1.52s/it]
+2020-11-11 20:52:05,577 - INFO - tqdm - accuracy: 0.6296, batch_loss: 0.3277, loss: 1.0403 ||:  54%|#####4    | 27/50 [00:43<00:50,  2.21s/it]
+2020-11-11 20:52:15,754 - INFO - tqdm - accuracy: 0.6912, batch_loss: 2.0904, loss: 0.8988 ||:  68%|######8   | 34/50 [00:53<00:37,  2.34s/it]
+2020-11-11 20:52:27,277 - INFO - tqdm - accuracy: 0.6892, batch_loss: 0.1141, loss: 0.8969 ||:  74%|#######4  | 37/50 [01:05<00:51,  3.94s/it]
+2020-11-11 20:52:37,693 - INFO - tqdm - accuracy: 0.6705, batch_loss: 0.1673, loss: 0.9111 ||:  88%|########8 | 44/50 [01:15<00:09,  1.58s/it]
+2020-11-11 20:52:44,364 - INFO - tqdm - accuracy: 0.6700, batch_loss: 0.5210, loss: 0.9269 ||: 100%|##########| 50/50 [01:22<00:00,  1.11s/it]
+2020-11-11 20:52:44,364 - INFO - tqdm - accuracy: 0.6700, batch_loss: 0.5210, loss: 0.9269 ||: 100%|##########| 50/50 [01:22<00:00,  1.65s/it]
+2020-11-11 20:52:44,364 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-11-11 20:52:44,364 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.969  |     0.670
+2020-11-11 20:52:44,364 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  5001.279  |       N/A
+2020-11-11 20:52:44,365 - INFO - allennlp.training.tensorboard_writer - loss               |     0.099  |     0.927
+2020-11-11 20:52:44,365 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  3785.762  |       N/A
+2020-11-11 20:52:44,372 - INFO - allennlp.training.trainer - Epoch duration: 0:07:50.170405
+2020-11-11 20:52:44,372 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:07:49
+2020-11-11 20:52:44,372 - INFO - allennlp.training.trainer - Epoch 4/4
+2020-11-11 20:52:44,372 - INFO - allennlp.training.trainer - Worker 0 memory usage: 3.7G
+2020-11-11 20:52:44,372 - INFO - allennlp.training.trainer - GPU 0 memory usage: 4.9G
+2020-11-11 20:52:44,372 - INFO - allennlp.training.trainer - Training
+2020-11-11 20:52:44,372 - INFO - tqdm - 0%|          | 0/273 [00:00<?, ?it/s]
+2020-11-11 20:52:54,553 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.1343, loss: 0.0641 ||:   4%|4         | 11/273 [00:10<03:45,  1.16it/s]
+2020-11-11 20:53:05,180 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0235, loss: 0.0580 ||:   7%|6         | 19/273 [00:20<05:33,  1.31s/it]
+2020-11-11 20:53:16,194 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0033, loss: 0.0441 ||:  10%|#         | 28/273 [00:31<05:05,  1.25s/it]
+2020-11-11 20:53:28,214 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.1659, loss: 0.0508 ||:  13%|#3        | 36/273 [00:43<06:28,  1.64s/it]
+2020-11-11 20:53:40,605 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0567, loss: 0.0464 ||:  16%|#6        | 45/273 [00:56<06:31,  1.72s/it]
+2020-11-11 20:53:54,977 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0631, loss: 0.0464 ||:  19%|#8        | 51/273 [01:10<12:19,  3.33s/it]
+2020-11-11 20:54:07,054 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0160, loss: 0.0440 ||:  21%|##1       | 58/273 [01:22<07:23,  2.06s/it]
+2020-11-11 20:54:17,270 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0015, loss: 0.0398 ||:  24%|##3       | 65/273 [01:32<04:12,  1.21s/it]
+2020-11-11 20:54:28,250 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0554, loss: 0.0384 ||:  26%|##5       | 70/273 [01:43<06:09,  1.82s/it]
+2020-11-11 20:54:39,685 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0568, loss: 0.0390 ||:  29%|##8       | 79/273 [01:55<04:24,  1.36s/it]
+2020-11-11 20:54:50,086 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0009, loss: 0.0371 ||:  33%|###2      | 89/273 [02:05<03:55,  1.28s/it]
+2020-11-11 20:55:01,331 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0241, loss: 0.0368 ||:  34%|###4      | 94/273 [02:16<06:24,  2.15s/it]
+2020-11-11 20:55:12,852 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0017, loss: 0.0353 ||:  37%|###6      | 101/273 [02:28<04:58,  1.74s/it]
+2020-11-11 20:55:24,744 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0194, loss: 0.0328 ||:  40%|####      | 110/273 [02:40<04:04,  1.50s/it]
+2020-11-11 20:55:37,661 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0236, loss: 0.0332 ||:  44%|####3     | 120/273 [02:53<05:01,  1.97s/it]
+2020-11-11 20:55:47,671 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0118, loss: 0.0323 ||:  47%|####6     | 128/273 [03:03<02:59,  1.24s/it]
+2020-11-11 20:56:02,836 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0054, loss: 0.0307 ||:  51%|#####     | 138/273 [03:18<06:06,  2.71s/it]
+2020-11-11 20:56:13,170 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0048, loss: 0.0294 ||:  54%|#####4    | 148/273 [03:28<02:03,  1.01it/s]
+2020-11-11 20:56:23,666 - INFO - tqdm - accuracy: 1.0000, batch_loss: 0.0026, loss: 0.0288 ||:  58%|#####8    | 159/273 [03:39<02:00,  1.06s/it]
+2020-11-11 20:56:35,144 - INFO - tqdm - accuracy: 0.9970, batch_loss: 0.0124, loss: 0.0330 ||:  61%|######    | 166/273 [03:50<02:51,  1.60s/it]
+2020-11-11 20:56:48,594 - INFO - tqdm - accuracy: 0.9971, batch_loss: 0.0019, loss: 0.0326 ||:  63%|######3   | 173/273 [04:04<03:45,  2.25s/it]
+2020-11-11 20:56:58,933 - INFO - tqdm - accuracy: 0.9946, batch_loss: 0.0234, loss: 0.0346 ||:  67%|######7   | 184/273 [04:14<01:36,  1.08s/it]
+2020-11-11 20:57:09,501 - INFO - tqdm - accuracy: 0.9948, batch_loss: 0.0060, loss: 0.0337 ||:  70%|#######   | 192/273 [04:25<02:03,  1.52s/it]
+2020-11-11 20:57:20,436 - INFO - tqdm - accuracy: 0.9950, batch_loss: 0.0067, loss: 0.0328 ||:  73%|#######2  | 199/273 [04:36<02:16,  1.84s/it]
+2020-11-11 20:57:31,619 - INFO - tqdm - accuracy: 0.9952, batch_loss: 0.0246, loss: 0.0323 ||:  77%|#######6  | 209/273 [04:47<01:13,  1.15s/it]
+2020-11-11 20:57:41,736 - INFO - tqdm - accuracy: 0.9953, batch_loss: 0.0579, loss: 0.0326 ||:  78%|#######8  | 214/273 [04:57<02:05,  2.13s/it]
+2020-11-11 20:57:51,973 - INFO - tqdm - accuracy: 0.9955, batch_loss: 0.0021, loss: 0.0329 ||:  81%|########  | 220/273 [05:07<01:28,  1.67s/it]
+2020-11-11 20:58:02,414 - INFO - tqdm - accuracy: 0.9956, batch_loss: 0.0382, loss: 0.0322 ||:  84%|########3 | 228/273 [05:18<01:01,  1.36s/it]
+2020-11-11 20:58:13,201 - INFO - tqdm - accuracy: 0.9958, batch_loss: 0.0012, loss: 0.0315 ||:  86%|########6 | 236/273 [05:28<01:00,  1.63s/it]
+2020-11-11 20:58:24,325 - INFO - tqdm - accuracy: 0.9959, batch_loss: 0.0018, loss: 0.0311 ||:  89%|########9 | 244/273 [05:39<00:46,  1.60s/it]
+2020-11-11 20:58:34,783 - INFO - tqdm - accuracy: 0.9960, batch_loss: 0.0052, loss: 0.0309 ||:  92%|#########1| 251/273 [05:50<00:43,  1.99s/it]
+2020-11-11 20:58:48,334 - INFO - tqdm - accuracy: 0.9962, batch_loss: 0.0040, loss: 0.0307 ||:  95%|#########5| 260/273 [06:03<00:34,  2.67s/it]
+2020-11-11 20:58:58,649 - INFO - tqdm - accuracy: 0.9963, batch_loss: 0.0102, loss: 0.0302 ||:  99%|#########8| 269/273 [06:14<00:03,  1.01it/s]
+2020-11-11 20:59:04,533 - INFO - tqdm - accuracy: 0.9963, batch_loss: 0.0008, loss: 0.0302 ||: 100%|#########9| 272/273 [06:20<00:01,  1.65s/it]
+2020-11-11 20:59:04,856 - INFO - tqdm - accuracy: 0.9963, batch_loss: 0.0188, loss: 0.0302 ||: 100%|##########| 273/273 [06:20<00:00,  1.25s/it]
+2020-11-11 20:59:04,856 - INFO - tqdm - accuracy: 0.9963, batch_loss: 0.0188, loss: 0.0302 ||: 100%|##########| 273/273 [06:20<00:00,  1.39s/it]
+2020-11-11 20:59:04,940 - INFO - allennlp.training.trainer - Validating
+2020-11-11 20:59:04,940 - INFO - tqdm - 0%|          | 0/50 [00:00<?, ?it/s]
+2020-11-11 20:59:16,255 - INFO - tqdm - accuracy: 0.6250, batch_loss: 0.5442, loss: 1.1163 ||:  16%|#6        | 8/50 [00:11<01:17,  1.85s/it]
+2020-11-11 20:59:26,289 - INFO - tqdm - accuracy: 0.6000, batch_loss: 2.3785, loss: 1.3193 ||:  30%|###       | 15/50 [00:21<00:52,  1.51s/it]
+2020-11-11 20:59:39,142 - INFO - tqdm - accuracy: 0.5789, batch_loss: 1.5167, loss: 1.2944 ||:  38%|###8      | 19/50 [00:34<01:25,  2.76s/it]
+2020-11-11 20:59:49,558 - INFO - tqdm - accuracy: 0.6190, batch_loss: 0.4847, loss: 1.2034 ||:  42%|####2     | 21/50 [00:44<02:06,  4.38s/it]
+2020-11-11 21:00:00,258 - INFO - tqdm - accuracy: 0.6167, batch_loss: 1.1426, loss: 1.3610 ||:  60%|######    | 30/50 [00:55<00:26,  1.33s/it]
+2020-11-11 21:00:10,698 - INFO - tqdm - accuracy: 0.6184, batch_loss: 0.0692, loss: 1.2829 ||:  76%|#######6  | 38/50 [01:05<00:15,  1.30s/it]
+2020-11-11 21:00:21,026 - INFO - tqdm - accuracy: 0.6304, batch_loss: 1.5682, loss: 1.3150 ||:  92%|#########2| 46/50 [01:16<00:05,  1.29s/it]
+2020-11-11 21:00:24,987 - INFO - tqdm - accuracy: 0.6400, batch_loss: 0.0862, loss: 1.3072 ||: 100%|##########| 50/50 [01:20<00:00,  1.02s/it]
+2020-11-11 21:00:24,987 - INFO - tqdm - accuracy: 0.6400, batch_loss: 0.0862, loss: 1.3072 ||: 100%|##########| 50/50 [01:20<00:00,  1.60s/it]
+2020-11-11 21:00:24,987 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-11-11 21:00:24,987 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.996  |     0.640
+2020-11-11 21:00:24,987 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |  5001.279  |       N/A
+2020-11-11 21:00:24,987 - INFO - allennlp.training.tensorboard_writer - loss               |     0.030  |     1.307
+2020-11-11 21:00:24,987 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |  3785.812  |       N/A
+2020-11-11 21:00:24,994 - INFO - allennlp.training.trainer - Epoch duration: 0:07:40.622447
+2020-11-11 21:00:24,994 - INFO - allennlp.training.checkpointer - loading best weights
+2020-11-11 21:00:25,017 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 0,
+  "peak_worker_0_memory_MB": 3785.8125,
+  "peak_gpu_0_memory_MB": 5001.279296875,
+  "training_duration": "0:38:59.715534",
   "training_start_epoch": 0,
   "training_epochs": 4,
   "epoch": 4,
-  "training_accuracy": 1.0,
-  "training_loss": 0.023184478924056326,
-  "training_worker_0_memory_MB": 2963.61328125,
-  "training_gpu_0_memory_MB": 8.62939453125,
-  "validation_accuracy": 0.68,
-  "validation_loss": 0.9423185930802271,
-  "best_validation_accuracy": 0.72,
-  "best_validation_loss": 0.5840673824915519
+  "training_accuracy": 0.9963302752293578,
+  "training_loss": 0.03018709821534995,
+  "training_worker_0_memory_MB": 3785.8125,
+  "training_gpu_0_memory_MB": 5001.279296875,
+  "validation_accuracy": 0.64,
+  "validation_loss": 1.3071735347737559,
+  "best_validation_accuracy": 0.66,
+  "best_validation_loss": 0.6353080201148987
 }
-2020-11-11 11:44:10,361 - INFO - allennlp.models.archival - archiving weights and vocabulary to results/model.tar.gz
+2020-11-11 21:00:25,017 - INFO - allennlp.models.archival - archiving weights and vocabulary to results/model.tar.gz

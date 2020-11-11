@@ -22,7 +22,7 @@ if __name__ == "__main__":
     # vocab = Vocabulary.from_files("results/vocabulary")
     # model = build_model(vocab)
     # Model.from_archive("results/model.tar.gz")
-    model = Model.from_archive("../results/model.tar.gz")
+    model = Model.from_archive("/home/ubuntu/allennlp-sample/results/model.tar.gz")
     dataset_reader = ClassificationTsvReader()
 
     predictor = SentenceClassifierPredictor(model, dataset_reader)
@@ -34,7 +34,8 @@ if __name__ == "__main__":
     # print([(model.vocab.get_token_from_index(label_id, 'labels'), prob)
            # for label_id, prob in enumerate(output['probs'])])
 
+    st.title("Media Bias Demo")
     inp = st.text_area('Enter the text from a news article below')
     output = predictor.predict(inp)
     print("OUTPUT", output)
-    st.write(f"The probability that this article is 'hyperpartisan' is {output['probs'][0]:.2f}.")
+    st.write(f"The probability that this article is 'hyperpartisan' is {output['probs'][1]:.2f}.")

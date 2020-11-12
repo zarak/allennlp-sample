@@ -1,12 +1,8 @@
-let
-  pkgs = import <nixpkgs> {};
-in
-  pkgs.mkShell {
-    name = "simpleEnv";
-    buildInputs = with pkgs; [
-      python38
-      python38Packages.pytorch
-    ];
-   shellHook = ''
-      '';
-  }
+{ pkgs ? import <nixpkgs> {} }:
+
+pkgs.python38Packages.buildPythonApplication {
+  pname = "myapp";
+  src = ./.;
+  version = "0.1";
+  propagatedBuildInputs = [ pkgs.python38Packages.pytorch ];
+}

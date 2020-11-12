@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "allennlp-sample"
+version = "0.1.0"
+description = ""
+authors = ["Zarak <7254237+zarak@users.noreply.github.com>"]
+
+[tool.poetry.scripts]
+allennlp-sample = "allennlp-sample:main"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+allennlp = "^1.2.1"
+botocore = "^1.19.16"
+
+[tool.poetry.dev-dependencies]
+allennlp = "^1.2.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

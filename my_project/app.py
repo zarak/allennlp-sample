@@ -26,11 +26,11 @@ if __name__ == "__main__":
     # vocab = Vocabulary.from_files("results/vocabulary")
     # model = build_model(vocab)
     # Model.from_archive("results/model.tar.gz")
-    # model = Model.from_archive("/home/ubuntu/allennlp-sample/results/model.tar.gz")
-    model = Model.from_archive("../results/model.tar.gz")
-    # dataset_reader = ClassificationTsvReader()
+    model = Model.from_archive("/home/ubuntu/allennlp-sample/results/model.tar.gz")
+    # model = Model.from_archive("../results/model.tar.gz")
 
     token_indexer = ELMoTokenCharactersIndexer()
+    dataset_reader = ClassificationTsvReader(token_indexers={'elmo': token_indexer})
     options_file = 'https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_options.json'
     weight_file = 'https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x1024_128_2048cnn_1xhighway/elmo_2x1024_128_2048cnn_1xhighway_weights.hdf5'
      
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
 
     # predictor = SentenceClassifierPredictor(model, dataset_reader)
-    predictor = SentenceClassifierPredictor(model, token_indexer)
+    predictor = SentenceClassifierPredictor(model, dataset_reader)
 
     # output = predictor.predict('A good movie!')
     # print([(model.vocab.get_token_from_index(label_id, 'labels'), prob)

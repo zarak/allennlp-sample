@@ -156,7 +156,7 @@ sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.4
 -e git+git@github.com:zarak/media-bias-nlp.git@4f0530a98c2ca1115dc388e0e0e050900d27bb79#egg=src
 srsly==1.0.3
-streamlit==0.70.0
+streamlit==1.11.1
 tensorboard==2.3.0
 tensorboard-plugin-wit==1.7.0
 tensorboardX==2.1

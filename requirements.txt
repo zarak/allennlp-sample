@@ -176,7 +176,7 @@ traitlets @ file:///tmp/build/80754af9/traitlets_1602787416690/work
 transformers==3.4.0
 typing-extensions==3.7.4.3
 tzlocal==2.1
-urllib3==1.25.11
+urllib3==1.26.5
 userpath==1.4.1
 validators==0.18.1
 wasabi==0.8.0

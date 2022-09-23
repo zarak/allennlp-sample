@@ -108,7 +108,7 @@ pluggy==0.13.1
 preshed==3.0.4
 prometheus-client==0.8.0
 prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1602688806899/work
-protobuf==3.13.0
+protobuf==3.18.3
 ptyprocess==0.6.0
 py==1.9.0
 py-rouge==1.1

@@ -66,7 +66,7 @@ itsdangerous==1.1.0
 jedi @ file:///tmp/build/80754af9/jedi_1598371611696/work
 Jinja2==2.11.2
 jmespath==0.10.0
-joblib==0.17.0
+joblib==1.2.0
 jsonnet==0.16.0
 jsonpickle==1.4.1
 jsonschema==3.2.0
